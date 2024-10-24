@@ -1,4 +1,3 @@
-// <-------------QUOTES------------>
 const quotesText = document.querySelector('.login__quotes-text')
 const quotesAuthor = document.querySelector('.login__quotes-author')
 

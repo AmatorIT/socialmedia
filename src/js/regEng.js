@@ -1,5 +1,3 @@
-// <-------Registration FORM----------->
-
 const regName = document.getElementById('name')
 const regUsername = document.getElementById('username')
 const regEmail = document.getElementById('email1')
