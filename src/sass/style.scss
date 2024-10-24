@@ -292,6 +292,16 @@ body {
 			background-color: utilities.$hover;
 		}
 	}
+	.checkBox__error{
+		margin-left: 2.5em;
+		font-size: 1.5rem;
+		color: utilities.$error;
+		visibility: hidden;
+	}
+	.error-active{
+		visibility: visible;
+
+	}
 }
 
 // <---------MEDIA----------->

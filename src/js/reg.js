@@ -4,7 +4,8 @@ const regEmail = document.getElementById('email1')
 const regPass1 = document.getElementById('password1')
 const regPass2 = document.getElementById('password2')
 const regBtn = document.querySelector('.registration__btn')
-// const regError = document.querySelector('.registration__error')
+const regCheckBox  =document.querySelector('.registration__checkbox')
+const checkBoxError = document.querySelector('.checkBox__error')
 
 const showError = (input, msg) => {
 	const error = input.parentElement
@@ -12,7 +13,7 @@ const showError = (input, msg) => {
 
 	const errorMsg = error.querySelector('.registration__error')
 	errorMsg.textContent = msg
-	console.log(errorMsg)
+	
 }
 
 const clearError = input => {
@@ -46,7 +47,7 @@ const checkEmail = email => {
 		/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,3}))$/
 
 	if (email.value == '') {
-		checkForm(email)
+		checkForm(regEmail)
 	} else if (!reg.test(email.value)) {
 		showError(email, `Podany adres email jest nieprawidłowy`)
 	}
@@ -59,13 +60,22 @@ const logIn = e => {
 	checkPass(regPass1, regPass2)
 	checkLength(regName, 3)
 	checkLength(regPass1, 10)
-    
+    confirmCheckBox()
     
 }
+const confirmCheckBox = ()=>{
+	if(regCheckBox.checked !== false){
+		checkBoxError.classList.remove('error-active')
+	}else{
+		checkBoxError.classList.add('error-active')
+		
+	}
+}
+
 
 
 [regName, regUsername, regEmail, regPass1, regPass2].forEach(item=>item.addEventListener('keyup', ()=>{
 	item.parentElement.classList.remove('error')
 }))
-
+regCheckBox.addEventListener('click', confirmCheckBox)
 regBtn.addEventListener('click', logIn)
