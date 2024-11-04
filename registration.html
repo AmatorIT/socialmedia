@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/2c13fa7da5.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
+    <link rel="stylesheet" href="./dist/css/style.min.css">
+    <title>FreeFolks</title>
+</head>
+
+<body>
+
+    
+    <div class="registration">
+        <h1 class="registration__title">freeFolks</h1>
+        <div class="registration__form">
+            <h2 class="registration__text">Utwórz nowe konto</h2>
+            <div class="registration__box ">
+
+                <input type="text" id="name" class="registration__input" required>
+                <label for="name" class="registration__label">Imię:</label>
+                <p class="registration__error ">Wpisz Imię</p>
+
+            </div>
+            <div class="registration__box ">
+
+                <input type="text" id="username" class="registration__input" required>
+                <label for="username" class="registration__label">Nazwisko:</label>
+                <p class="registration__error ">Wpisz Nazwisko</p>
+
+            </div>
+            <div class="registration__box">
+
+                <input type="text" id="email1" class="registration__input" required>
+                <label for="email1" class="registration__label">Email:</label>
+                <p class="registration__error">Wpisz adres email</p>
+
+            </div>
+            <div class="registration__box">
+                <input type="password" id="password1" class="registration__input" required>
+                <label for="password1" class="registration__label">Hasło:</label>
+                <p class="registration__error">Wpisz hasło</p>
+            </div>
+            <div class="registration__box">
+                <input type="password" id="password2" class="registration__input" required>
+                <label for="password2" class="registration__label">Powtórz hasło:</label>
+                <p class="registration__error">Powtórz hasło</p>
+            </div>
+            <div class="registration__info">
+                <input type="checkbox" class="registration__checkbox" ><p class="registration__policy">Zgadzam się z polityką prywatności</p>
+            </div>
+            <div class="registration__info">
+                <p class="checkBox__error">Zaakceptuj politykę prywatności</p>
+            </div>
+            <button class="registration__btn">Zarejestruj się</button>
+        </div>
+    </div>
+    <div class="footer">
+    <div class="footer__box">
+        <p class="footer__links"><a href="index.html">Polski</a><a href="english.html" rel="noopener">English(US)</a></p>
+        <p class="footer__coppy"> Underground &copy; <span class="date"></span></p>
+    </div>
+</div>
+
+
+
+    <script src="./dist/js/reg.min.js"></script>
+</body>
+
+</html>
